@@ -66,8 +66,29 @@ export const ContactSection: React.FC = () => {
                 className="text-xs sm:text-[13px] font-light text-[#A8988B] leading-relaxed max-w-md"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
-                Have an ambitious system to architect, an engineering opportunity, or a collaborative inquiry? Send a direct dispatch below.
+                Have an ambitious AI product to scope, a platform to architect, or a delivery challenge to solve? Send a direct dispatch below.
               </p>
+
+              <div
+                className="mt-8 space-y-2.5 text-[11px] font-mono tracking-[0.15em] text-[#C4B5A5]"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-[#8C6D4F] uppercase">EMAIL</span>
+                  <a href="mailto:bhavaniprasadkoppala3@gmail.com" className="hover:text-[#D4AF37] transition-colors">
+                    bhavaniprasadkoppala3@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-[#8C6D4F] uppercase">PHONE</span>
+                  <a href="tel:+916302076239" className="hover:text-[#D4AF37] transition-colors">
+                    +91 63020 76239
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-[#8C6D4F] uppercase">LOCATION</span>
+                  <span>Hyderabad, Telangana, India</span>
+                </div>
+              </div>
             </div>
           </div>
 
