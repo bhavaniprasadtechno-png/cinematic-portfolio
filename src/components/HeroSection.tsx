@@ -77,7 +77,7 @@ export const HeroSection: React.FC = () => {
             maskImage:
               'radial-gradient(ellipse 85% 85% at 50% 45%, black 55%, transparent 100%)',
           }}
-          className="h-[92vh] w-auto max-w-none object-contain origin-bottom scale-95 md:scale-[0.98] lg:scale-100"
+          className="h-[92vh] w-auto max-w-none object-contain origin-bottom scale-95 md:scale-[0.98] lg:scale-100 translate-x-[8%] lg:translate-x-[10%]"
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
