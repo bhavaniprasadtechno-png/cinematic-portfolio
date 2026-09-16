@@ -65,13 +65,13 @@ export const HeroSection: React.FC = () => {
       )}
 
       {/* ================= 2. FIXED VIDEO LAYER ================= */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-black flex items-center justify-end">
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-black flex items-end justify-end">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="h-screen w-auto max-w-none object-contain origin-right scale-95 md:scale-[0.98] lg:scale-100"
+          className="h-[92vh] w-auto max-w-none object-contain origin-bottom-right scale-95 md:scale-[0.98] lg:scale-100"
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
@@ -276,14 +276,14 @@ export const HeroSection: React.FC = () => {
             <div className="w-28 h-[1px] bg-gradient-to-r from-[#D4AF37] via-[#E8D7C5]/70 to-transparent shadow-[0_0_8px_rgba(212,175,55,0.4)] mb-2" />
 
             {/* 4. Fine Monoline Calligraphy Signature */}
-            <div 
-              className="text-[2.2rem] text-[#D8AB64] font-normal leading-none -ml-0.5"
-              style={{ 
+            <div
+              className="text-[1.4rem] text-[#D8AB64] font-normal leading-none -ml-0.5 whitespace-nowrap"
+              style={{
                 fontFamily: "'Herr Von Muellerhoff', 'Allura', cursive",
-                letterSpacing: '0.04em',
+                letterSpacing: '0.02em',
               }}
             >
-              Bhavani
+              Bhavani Prasad Koppala
             </div>
           </motion.div>
         </div>
