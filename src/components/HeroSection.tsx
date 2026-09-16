@@ -65,13 +65,13 @@ export const HeroSection: React.FC = () => {
       )}
 
       {/* ================= 2. FIXED VIDEO LAYER ================= */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-black flex items-end justify-end">
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-black flex items-end justify-center">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="h-[92vh] w-auto max-w-none object-contain origin-bottom-right scale-95 md:scale-[0.98] lg:scale-100"
+          className="h-[92vh] w-auto max-w-none object-contain origin-bottom scale-95 md:scale-[0.98] lg:scale-100"
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
