@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import type { Variants } from 'framer-motion';
-import aboutImg from '../assets/about.png';
+import aboutImg from '../assets/about.jpg';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -264,7 +264,8 @@ export const AboutSection: React.FC = () => {
                 <img
                   src={aboutImg}
                   alt="Bhavani Prasad Koppala"
-                  className="w-full h-full object-cover object-top filter brightness-[0.94] contrast-[1.06] saturate-[1.02] group-hover:brightness-105 group-hover:contrast-[1.12] transition-all duration-700 ease-out"
+                  style={{ objectPosition: '82% center' }}
+                  className="w-full h-full object-cover filter brightness-[0.94] contrast-[1.06] saturate-[1.02] group-hover:brightness-105 group-hover:contrast-[1.12] transition-all duration-700 ease-out"
                 />
 
                 {/* Mouse-Tracked Holographic Glass Spotlight Sweep */}
