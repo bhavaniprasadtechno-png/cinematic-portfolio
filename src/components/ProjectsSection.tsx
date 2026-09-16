@@ -7,7 +7,7 @@ interface Project {
   title: string;
   category: string;
   description: string;
-  githubUrl: string;
+  status: string;
   tech: string[];
   metrics: { label: string; value: string }[];
 }
@@ -15,97 +15,68 @@ interface Project {
 const projects: Project[] = [
   {
     number: '01',
-    title: 'PolicyGuard AI',
-    category: 'AI / LEGAL-TECH PLATFORM',
+    title: 'ThreeView',
+    category: 'AI / 3D COMMERCE PLATFORM',
     description:
-      'AI-powered platform engineered for automated privacy policy analysis and legal contract auditing across web, desktop, and mobile. Implements NLP extraction, real-time risk alert detection, and generative risk score intelligence.',
-    githubUrl: 'https://github.com/lohithadamisetti123',
+      'Cloud-native platform letting eCommerce merchants publish interactive 3D product configurators on their storefronts. AI image-to-3D generation via Tripo AI, semantic part segmentation and AI texture generation via FAL.AI, LLM-driven product scraping, a real-time WebGL viewer with mobile AR preview, and an attribute-based dynamic pricing engine.',
+    status: 'Live in production, v1.0',
     tech: [
-      'React.js',
-      'React Native',
-      'Electron.js',
-      'Node.js',
-      'Express.js',
-      'MongoDB Atlas',
-      'OpenAI API',
-      'Prompt Eng',
-      'NLP',
-      'Docker',
-      'JWT',
+      'Tripo AI',
+      'FAL.AI',
+      'WebGL',
+      'GLB/GLTF',
+      'Shopify',
+      'WooCommerce',
+      'Webflow',
+      'RBAC',
+      'Draco/Meshopt',
     ],
     metrics: [
-      { label: 'PLATFORMS', value: 'Web, Mobile, Desktop' },
-      { label: 'ENGINE', value: 'OpenAI NLP / GPT' },
-      { label: 'PIPELINE', value: 'Automated Scoring' },
+      { label: 'ONBOARDING', value: 'URL, Store, Scratch' },
+      { label: 'INTEGRATIONS', value: 'Shopify, Woo, Webflow' },
+      { label: 'PRICING', value: 'Multi-Currency Dynamic' },
     ],
   },
   {
     number: '02',
-    title: 'Software Release Risk Heatmap',
-    category: 'MACHINE LEARNING / DEV PLATFORM',
+    title: 'Datacon',
+    category: 'MULTI-AGENT / ENTERPRISE ANALYTICS',
     description:
-      'Full-stack predictive release management platform utilizing Machine Learning. Implements a trained Random Forest classifier to categorize release stability from Low to Critical risk, rendered over a live interactive team heatmap.',
-    githubUrl: 'https://github.com/lohithadamisetti123',
+      'B2B platform that unifies structured warehouse data and unstructured document repositories into one conversational surface, routing business questions to specialised descriptive, diagnostic, predictive and prescriptive agents.',
+    status: 'Live in production, v1.0',
     tech: [
-      'React.js',
-      'TypeScript',
-      'Python',
-      'FastAPI',
-      'scikit-learn',
-      'PostgreSQL',
-      'Tailwind CSS',
-      'REST APIs',
-      'JWT',
+      'Multi-Agent Orchestration',
+      'Postgres',
+      'MySQL',
+      'BigQuery',
+      'Snowflake',
+      'RBAC',
+      'Real-Time Streaming',
     ],
     metrics: [
-      { label: 'MODEL', value: 'Random Forest' },
-      { label: 'ACCURACY', value: 'High Precision' },
-      { label: 'DASHBOARD', value: 'Live Risk Heatmap' },
+      { label: 'NORTH STAR', value: '< 800ms Time-to-Token' },
+      { label: 'ROLES', value: 'Viewer, Analyst, Admin' },
+      { label: 'CONNECTORS', value: '5 Data Sources' },
     ],
   },
   {
     number: '03',
-    title: 'Multi-Tenant SaaS Platform',
-    category: 'CLOUD / DISTRIBUTED SYSTEM',
+    title: 'LeadPilot',
+    category: 'AGENTIC AI / SALES AUTOMATION',
     description:
-      'Enterprise-grade multi-tenant platform built for unified management of teams, projects, and execution lifecycles. Architected with strict tenant data isolation, granular Role-Based Access Control (RBAC), and containerized deployments.',
-    githubUrl: 'https://github.com/lohithadamisetti123',
+      'Eight specialised AI agents orchestrated in n8n Cloud over a Next.js and Postgres application, owning the full top-of-funnel motion — discovery, enrichment, qualification, outreach, reply classification, and meeting booking — with a human-in-the-loop approvals queue.',
+    status: 'Built, pre-launch',
     tech: [
-      'Node.js',
-      'Express.js',
-      'PostgreSQL',
-      'React',
-      'Docker',
-      'JWT',
-      'RBAC',
-      'REST APIs',
+      'n8n Cloud',
+      'Next.js',
+      'Postgres',
+      '8 AI Agents',
+      'Human-in-the-Loop',
     ],
     metrics: [
-      { label: 'ARCHITECTURE', value: 'Multi-Tenant' },
-      { label: 'SECURITY', value: 'RBAC Isolation' },
-      { label: 'CONTAINERS', value: 'Docker Compose' },
-    ],
-  },
-  {
-    number: '04',
-    title: 'Payment Gateway with Hosted Checkout',
-    category: 'FINTECH / PAYMENT SYSTEMS',
-    description:
-      'End-to-end hosted payment gateway infrastructure supporting seamless merchant order generation, multi-currency processing, and secure consumer checkout via UPI and Cards with webhook transaction verification.',
-    githubUrl: 'https://github.com/lohithadamisetti123',
-    tech: [
-      'Node.js',
-      'Spring Boot',
-      'PostgreSQL',
-      'React',
-      'Docker',
-      'REST APIs',
-      'UPI / Card Integrations',
-    ],
-    metrics: [
-      { label: 'PROTOCOLS', value: 'UPI & Cards' },
-      { label: 'BACKEND', value: 'Spring Boot + Node' },
-      { label: 'DATABASE', value: 'ACID PostgreSQL' },
+      { label: 'AGENTS', value: '8 Specialised' },
+      { label: 'ORCHESTRATION', value: 'n8n Cloud' },
+      { label: 'GUARDRAILS', value: 'Approval Queue' },
     ],
   },
 ];
@@ -264,16 +235,13 @@ export const ProjectsSection: React.FC = () => {
                       ))}
                     </div>
 
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center space-x-3 px-6 py-3.5 border border-[#8C6D4F] bg-[#16120E] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#EAD8C7] hover:text-black text-[11px] font-medium tracking-[0.24em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.1)]"
+                    <div
+                      className="inline-flex items-center justify-center space-x-3 px-6 py-3.5 border border-[#8C6D4F] bg-[#16120E] text-[#EAD8C7] text-[11px] font-medium tracking-[0.24em] uppercase shadow-[0_0_20px_rgba(212,175,55,0.1)]"
                       style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
-                      <span>VIEW ON GITHUB</span>
-                      <span className="text-xs">↗</span>
-                    </a>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shadow-[0_0_8px_#D4AF37]" />
+                      <span>{project.status}</span>
+                    </div>
                   </div>
 
                 </div>

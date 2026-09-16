@@ -118,7 +118,7 @@ export const HeroSection: React.FC = () => {
             className="text-xs sm:text-sm font-semibold tracking-[0.35em] uppercase text-[#EAD8C7] hover:opacity-75 transition-opacity"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            LOHITHA.
+            BHAVANI.
           </a>
 
           {/* Navigation Links */}
@@ -176,14 +176,14 @@ export const HeroSection: React.FC = () => {
                   I BUILD
                 </span>
 
-                {/* Line 2: DIGITAL */}
+                {/* Line 2: AGENTIC */}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
-                  DIGITAL
+                  AGENTIC
                 </span>
 
-                {/* Line 3: EXPERIENCES */}
+                {/* Line 3: AI PRODUCTS */}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#DFBE8A] via-[#9B7640] to-[#342410] drop-shadow-[0_10px_30px_rgba(155,118,64,0.4)]">
-                  EXPERIENCES
+                  AI PRODUCTS
                 </span>
               </h1>
             </motion.div>
@@ -194,7 +194,7 @@ export const HeroSection: React.FC = () => {
                 className="text-[10px] sm:text-[11px] md:text-xs font-normal tracking-[0.28em] uppercase text-[#C4B29E]"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
-                FULL STACK DEVELOPER <span className="text-[#8C6D4F] mx-1">•</span> UI/UX DESIGNER <span className="text-[#8C6D4F] mx-1">•</span> DATA SCIENCE
+                AI PRODUCT OWNER <span className="text-[#8C6D4F] mx-1">•</span> PRODUCT MANAGER <span className="text-[#8C6D4F] mx-1">•</span> AGENTIC AI SYSTEMS
               </p>
             </motion.div>
 
@@ -205,9 +205,9 @@ export const HeroSection: React.FC = () => {
               style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               <p>
-                I turn bold ideas into seamless digital experiences.
+                10 years across product ownership and business analysis, now building agentic AI products end to end.
                 <br />
-                Where frontend meets powerful backend, and code transforms vision into impact.
+                From problem framing and PRDs through agent design, release, and production operation.
               </p>
             </motion.div>
 
@@ -234,7 +234,8 @@ export const HeroSection: React.FC = () => {
 
               {/* Download Resume Button */}
               <motion.a
-                href="/resume.pdf"
+                href="/Bhavani_Prasad_Koppala_Resume.docx"
+                download
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setIsHovered(true)}
@@ -267,7 +268,7 @@ export const HeroSection: React.FC = () => {
               className="text-[9.5px] font-medium tracking-[0.24em] uppercase text-[#E0D3C5] space-y-1 mb-3"
               style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
-              <p>CODE IS MY CRAFT.</p>
+              <p>PRODUCT IS MY CRAFT.</p>
               <p>IMPACT IS MY GOAL.</p>
             </div>
 
@@ -282,7 +283,7 @@ export const HeroSection: React.FC = () => {
                 letterSpacing: '0.04em',
               }}
             >
-              Lohitha
+              Bhavani
             </div>
           </motion.div>
         </div>
