@@ -71,13 +71,16 @@ export const HeroSection: React.FC = () => {
           muted
           loop
           playsInline
-          className="h-[92vh] w-auto max-w-none object-contain origin-bottom scale-95 md:scale-[0.98] lg:scale-100"
+          style={{
+            WebkitMaskImage:
+              'radial-gradient(ellipse 85% 85% at 50% 45%, black 55%, transparent 100%)',
+            maskImage:
+              'radial-gradient(ellipse 85% 85% at 50% 45%, black 55%, transparent 100%)',
+          }}
+          className="h-[92vh] w-auto max-w-none object-contain origin-bottom scale-95 md:scale-[0.98] lg:scale-100 translate-x-[8%] lg:translate-x-[10%]"
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
-
-        {/* Seamless Soft Left Edge Blend */}
-        <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black via-black/85 to-transparent pointer-events-none" />
 
         {/* ================= 3. ANIMATED WATERMARK EMBLEM ================= */}
         <div className="absolute bottom-6 right-6 lg:bottom-10 lg:right-12 pointer-events-none flex items-center justify-center z-10">
@@ -256,7 +259,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:flex flex-col items-start pointer-events-auto pr-24 xl:pr-36 mr-4 z-20 select-none"
+            className="hidden lg:flex flex-col items-start pointer-events-auto pr-10 xl:pr-14 mr-0 z-20 select-none"
           >
             {/* 1. Quote Mark */}
             <span className="text-xl text-[#C99E5D] leading-none font-serif mb-2">
