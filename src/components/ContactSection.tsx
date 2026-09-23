@@ -50,7 +50,7 @@ export const ContactSection: React.FC = () => {
                 className="mb-8"
               >
                 <h2
-                  className="text-5xl sm:text-6xl md:text-7xl tracking-tight uppercase leading-[0.85] select-none"
+                  className="text-4xl sm:text-6xl md:text-7xl tracking-tight uppercase leading-[0.85] select-none"
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
                   <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
@@ -72,19 +72,19 @@ export const ContactSection: React.FC = () => {
               <div
                 className="mt-8 space-y-2.5 text-[11px] font-mono tracking-[0.15em] text-[#C4B5A5]"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
                   <span className="text-[#8C6D4F] uppercase">EMAIL</span>
-                  <a href="mailto:bhavaniprasadkoppala3@gmail.com" className="hover:text-[#D4AF37] transition-colors">
+                  <a href="mailto:bhavaniprasadkoppala3@gmail.com" className="hover:text-[#D4AF37] transition-colors break-all">
                     bhavaniprasadkoppala3@gmail.com
                   </a>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
                   <span className="text-[#8C6D4F] uppercase">PHONE</span>
                   <a href="tel:+916302076239" className="hover:text-[#D4AF37] transition-colors">
                     +91 63020 76239
                   </a>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
                   <span className="text-[#8C6D4F] uppercase">LOCATION</span>
                   <span>Hyderabad, Telangana, India</span>
                 </div>
