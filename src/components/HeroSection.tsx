@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import watermarkImg from '../assets/watermark.png';
 
@@ -38,6 +38,7 @@ const navItems = [
 export const HeroSection: React.FC = () => {
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [isHovered, setIsHovered] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -48,7 +49,7 @@ export const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-screen h-screen overflow-hidden bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black cursor-none">
+    <section className="relative w-full h-svh overflow-hidden bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black lg:cursor-none">
       {/* ================= 1. MINIMAL CUSTOM CURSOR ================= */}
       {cursorPos.x >= 0 && (
         <motion.div
@@ -126,7 +127,7 @@ export const HeroSection: React.FC = () => {
 
           {/* Navigation Links */}
           <nav
-            className="hidden md:flex items-center space-x-8 lg:space-x-10 text-[11px] tracking-[0.28em] font-light uppercase text-[#C4B5A5] absolute left-1/2 -translate-x-1/2"
+            className="hidden lg:flex items-center space-x-8 lg:space-x-10 text-[11px] tracking-[0.28em] font-light uppercase text-[#C4B5A5] absolute left-1/2 -translate-x-1/2"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             {navItems.map((item) => (
@@ -148,7 +149,7 @@ export const HeroSection: React.FC = () => {
             href="#contact"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="group flex items-center space-x-2 text-[11px] tracking-[0.24em] font-light uppercase py-2 px-4 border border-[#8C6D4F]/50 hover:border-[#D4AF37] text-[#EAD8C7] transition-all duration-300 backdrop-blur-sm ml-auto md:ml-0"
+            className="hidden lg:flex group items-center space-x-2 text-[11px] tracking-[0.24em] font-light uppercase py-2 px-4 border border-[#8C6D4F]/50 hover:border-[#D4AF37] text-[#EAD8C7] transition-all duration-300 backdrop-blur-sm"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             <span>LET&apos;S TALK</span>
@@ -156,7 +157,58 @@ export const HeroSection: React.FC = () => {
               ↗
             </span>
           </a>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+            className="lg:hidden flex flex-col items-center justify-center gap-[5px] w-10 h-10 ml-auto border border-[#8C6D4F]/40 text-[#EAD8C7]"
+          >
+            <span
+              className={`block w-4 h-[1.5px] bg-current transition-transform duration-300 ${isMenuOpen ? 'translate-y-[3px] rotate-45' : ''}`}
+            />
+            <span
+              className={`block w-4 h-[1.5px] bg-current transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}
+            />
+            <span
+              className={`block w-4 h-[1.5px] bg-current transition-transform duration-300 ${isMenuOpen ? '-translate-y-[3px] -rotate-45' : ''}`}
+            />
+          </button>
         </header>
+
+        {/* Mobile Nav Panel */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.nav
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="lg:hidden absolute top-[4.5rem] left-6 right-6 z-40 pointer-events-auto flex flex-col divide-y divide-[#8C6D4F]/25 border border-[#8C6D4F]/40 bg-[#0A0806]/95 backdrop-blur-md"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-6 py-4 text-xs tracking-[0.28em] uppercase text-[#C4B5A5] hover:text-[#FFF5EB] hover:bg-[#14100D] transition-colors"
+                >
+                  {item.name}
+                </a>
+              ))}
+              <a
+                href="#contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="px-6 py-4 text-xs tracking-[0.28em] uppercase text-[#D4AF37] hover:text-[#FFF5EB] hover:bg-[#14100D] transition-colors"
+              >
+                LET&apos;S TALK ↗
+              </a>
+            </motion.nav>
+          )}
+        </AnimatePresence>
 
         {/* Main Hero Row */}
         <div className="relative flex flex-col md:flex-row items-center justify-between w-full pt-4 pb-2 my-auto">
