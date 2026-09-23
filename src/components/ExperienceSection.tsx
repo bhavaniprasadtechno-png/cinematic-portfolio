@@ -48,10 +48,10 @@ const journey: RouteStop[] = [
   },
   {
     id: '06',
-    year: '2026',
-    title: 'AGENTIC AI CERTIFICATION',
-    organization: 'IBM',
-    description: 'Certified in Agentic AI, alongside a Certified Scrum Product Owner (CSPO) credential from Scrum Alliance and Certified Business Analyst from IIBA.',
+    year: 'SEP 2026',
+    title: 'GENERATIVE AI & AI AGENT BUILDING',
+    organization: 'ACCELERATORX · IN COOPERATION WITH IBM',
+    description: 'Professional certification in Generative AI & AI Agent Building, delivered in cooperation with IBM, alongside a Certified Scrum Product Owner (CSPO) credential from Scrum Alliance and Certified Business Analyst from IIBA.',
   },
 ];
 
